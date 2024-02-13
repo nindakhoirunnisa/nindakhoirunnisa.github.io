@@ -29,7 +29,7 @@
   display: block;
   width: $button-size * 2;
   height: $button-size * 2;
-  background: $primary-color;
+  background: #AC7D88;
   outline: 0;
   padding: 0;
   border: 2.5px solid transparent;
@@ -37,7 +37,7 @@
   z-index: 20;
   box-sizing: border-box;
   &:hover {
-    background: $black;
+    background: #85586F;
   }
   transition: $sliding-menu-animation;
   &.slide {
@@ -179,7 +179,7 @@
 .menu-screen {
   @include position(fixed, 0 0 0 0);
   visibility: hidden;
-  z-index: 4;
+  z-index: 2;
   &.is-visible {
     visibility: visible;
     &:hover {
