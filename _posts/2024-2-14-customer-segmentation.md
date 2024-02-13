@@ -2,7 +2,7 @@
 layout: article
 title: "Customer Segmentation with Clustering"
 share: true
-modified: 2024-02-14T01:01:57-04:00
+modified: 2024-02-10T01:01:57-04:00
 image:
     teaser: cust-prev (2).png
 categories: portofolio

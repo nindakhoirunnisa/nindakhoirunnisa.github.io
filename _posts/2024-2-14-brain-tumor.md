@@ -2,7 +2,7 @@
 layout: article
 title: "Detecting Brain Tumor with CNN"
 share: true
-modified: 2024-02-14T01:00:00-04:00
+modified: 2024-02-10T01:00:00-04:00
 image:
     teaser: brain-preview.png
 categories: portofolio
