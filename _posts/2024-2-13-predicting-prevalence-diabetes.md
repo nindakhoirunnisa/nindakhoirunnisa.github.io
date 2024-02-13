@@ -132,13 +132,13 @@ After the pre-processing is done, the intercept and coefficients for each featur
 
 All features except BloodPressure have positive sign. Since the data is continuous, the estimated odds of women to be diagnosed positive of diabetes will increase as the data value becomes higher. On the other hand, `BloodPressure` has negative sign thus it will decrease the estimated probability of a women to be diagnosed positive when its `BloodPressure` value becomes higher.
 
-According to Alan et. al., the farther a 𝜷𝒊 falls from 0, the stronger its effect on predictor xi and the odd ratios will fall farther from 1. Thus, for the coefficient in Figure 12, the predictor that has strong effect on xi are `DiabetesPedigree`. But this can also be affected of the different scale of each data.
+According to Alan et. al., the farther a 𝜷𝒊 falls from 0, the stronger its effect on predictor *x<sub>i</sub>* and the odd ratios will fall farther from 1. Thus, for the coefficient in Figure 12, the predictor that has strong effect on *x<sub>i</sub>* are `DiabetesPedigree`. But this can also be affected of the different scale of each data.
 
-On the first row data in ToPredict.csv, the estimated probability of this women to be tested 
-positive is 0.558. Given the continuous value in 6 selected features, the estimated probability of this woman to be labelled 1 is higher than 1 – 0.558 = 0.442, and the odds equals 0.558/0.442 = 1.26, meaning that a positive diabetes test result is  1.26 times as likely as a non-diabetes. Predicted labels for all data in ToPredict.csv are shown in Figure 13.
+On the first row data in `ToPredict.csv`, the estimated probability of this women to be tested 
+positive is 0.558. Given the continuous value in 6 selected features, the estimated probability of this woman to be labelled 1 is higher than 1 – 0.558 = 0.442, and the odds equals 0.558/0.442 = 1.26, meaning that a positive diabetes test result is  1.26 times as likely as a non-diabetes. Predicted labels for all data in  `ToPredict.csv` are shown in Figure 13.
 
 <img src="{{ site.url }}/images/diabetes-13.png">
-<cite>**Figure 13.**  Predicted outcome of ToPredict.csv</cite>
+<cite>**Figure 13.**  Predicted outcome of `ToPredict.csv`</cite>
 
 <img src="{{ site.url }}/images/diabetes-14.png">
 
@@ -146,7 +146,7 @@ positive is 0.558. Given the continuous value in 6 selected features, the estima
 
 ## Model Comparison
 
-By observing the Figure 11, 5 features (`Pregnancies`, `Glucose`, `BloodPressure`, `BMI`, and `Age`) will be used as predictor in the second model because it gives the best accuracy in the testing data. The significance of these features is measured by using chi2 from feature_selection in scikit learn. The result of the calculation is shown in Figure 15 below.
+By observing the Figure 11, 5 features (`Pregnancies`, `Glucose`, `BloodPressure`, `BMI`, and `Age`) will be used as predictor in the second model because it gives the best accuracy in the testing data. The significance of these features is measured by using chi2 from  `feature_selection` in scikit learn. The result of the calculation is shown in Figure 15 below.
 
 <img src="{{ site.url }}/images/diabetes-15.png">
 
@@ -158,9 +158,9 @@ The intercept, coefficients, and predicted value of this model is shown in Figur
 <cite>**Figure 16.**  Intercept and coefficient of 5 features</cite>
 
 <img src="{{ site.url }}/images/diabetes-17.png">
-<cite>**Figure 17.**  Predicted Outcome of ToPredict.csv</cite>
+<cite>**Figure 17.**  Predicted Outcome of  ToPredict.csv   </cite>
 
-The performance of this model can be measured with confusion_matrix that shows how well the model classify the data.
+The performance of this model can be measured with `confusion_matrix` that shows how well the model classify the data.
 
 <img src="{{ site.url }}/images/diabetes-18.png">
 <cite>**Figure 18.**  Model performance</cite>
@@ -168,14 +168,12 @@ The performance of this model can be measured with confusion_matrix that shows h
 Due to the imputation on the missing value, the distribution of data is slightly changed. Thus, the model with 6 features as predictor will be used to predict the status of each woman whether they are diagnosed with diabetes or non-diagnosed.
 
 ## References
-
-References
 - Jack W. Smith, J.E. Everhart, W.C. Dickson, W.C. Knowler, & R.S. Johannes. (1988). Using the ADAP Learning Algorithm to Forecast the Onset of Diabetes Mellitus. Annual Symposium on Computer Application in Medical Care, 261–265.
 - Agresti, A. (2018). Statistical Methods for the Social Sciences, Global Edition (5th edition). Pearson Education Limited.
-- sklearn.feature_selection.chi2. (n.d.). Scikit-Learn. https://scikitlearn.org/stable/modules/generated/sklearn.feature_selection.chi2.html
-- Step by Step Diabetes Classification-KNN-detailed. (2020, October 31). Kaggle. https://www.kaggle.com/code/shrutimechlearn/step-by-step-diabetes-classificationknn-detailed
-- Multivariate Statistical Analysis on Diabetes. (2020, August 10). Kaggle. https://www.kaggle.com/code/ravichaubey1506/multivariate-statistical-analysis-ondiabetes
-- Machine Learning & Predictive Modeling Analytics. (2020, April 16). Kaggle. https://www.kaggle.com/code/ravichaubey1506/machine-learning-predictivemodeling-analytics?scriptVersionId=3211447
+- sklearn.feature_selection.chi2. (n.d.). Scikit-Learn. https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.chi2.html
+- Step by Step Diabetes Classification-KNN-detailed. (2020, October 31). Kaggle. https://www.kaggle.com/code/shrutimechlearn/step-by-step-diabetes-classification-knn-detailed
+- Multivariate Statistical Analysis on Diabetes. (2020, August 10). Kaggle. https://www.kaggle.com/code/ravichaubey1506/multivariate-statistical-analysis-on-diabetes
+- Machine Learning & Predictive Modeling Analytics. (2020, April 16). Kaggle. https://www.kaggle.com/code/ravichaubey1506/machine-learning-predictive-modeling-analytics?scriptVersionId=3211447
 
 
 [Github](https://github.com/nindakhoirunnisa/sml-1)
