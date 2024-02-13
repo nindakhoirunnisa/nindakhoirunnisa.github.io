@@ -4,7 +4,7 @@ title: "Predicting Prevalence of Diabetes"
 share: true
 modified: 2024-02-13T20:07:00-04:00
 image:
-    teaser: tobacco-nyc.JPG
+    teaser: diabetes-preview.png
 categories: portofolio
 ---
 
