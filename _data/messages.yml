@@ -9,7 +9,7 @@ locales:
     toc: "Table of Contents"
     written_by: "Written by"
     updated: "Updated"
-    share: "Share on"
+    # share: "Share on"
   en_US:
     <<: *DEFAULT_EN     # use English translation for en_US
   en_UK:

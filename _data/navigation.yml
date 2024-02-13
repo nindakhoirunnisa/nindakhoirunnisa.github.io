@@ -3,7 +3,7 @@
 - title: Portfolio
   url: /portofolio/
   excerpt: "Things I’ve previously worked on."
-  image: portofolio.PNG
+  image: portofolio.PNG # change this
 
 
 - title: GitHub
