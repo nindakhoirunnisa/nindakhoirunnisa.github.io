@@ -182,4 +182,4 @@ Inference, and Prediction, Second Edition. Springer Publishing.
 - Korolev, M.V., & Ruehh, K. (2015). Gradient Boosted Trees to Predict Store Sale
 
 
-[Github](https://github.com/nindakhoirunnisa/sml-1)
+[Github](https://github.com/nindakhoirunnisa/rossmann)
