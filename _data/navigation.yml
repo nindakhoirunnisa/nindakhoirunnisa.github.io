@@ -1,0 +1,13 @@
+# Site navigation links
+
+- title: Portfolio
+  url: /portofolio/
+  excerpt: "Things I’ve previously worked on."
+  image: portofolio.PNG
+
+
+- title: GitHub
+  url: http://www.github.com/nindakhoirunnisa
+
+- title: Medium
+  url: http://www.medium.com/@nindakhrnns
