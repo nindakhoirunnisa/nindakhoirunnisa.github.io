@@ -11,7 +11,7 @@ categories: portofolio
 *A project to predict whether a woman has diabetes based on their health records.*
 
 <p class="notice-inverse">
-<strong>Authors</strong>: Ninda Khoirunnisa. This is coursework for Statistic and Machine Learning I: Statistical Foundations Course in MSc Data Science Program, University of Manchester, 2022.</p>
+<strong>Author</strong>: Ninda Khoirunnisa. This is coursework for Statistic and Machine Learning I: Statistical Foundations Course in MSc Data Science Program, University of Manchester, 2022.</p>
 
 ## Dataset Description
 
@@ -32,9 +32,11 @@ Eight features that are used as diagnostic measure in this dataset are explained
 One of data quality measure is the completeness of data, that is reflected by how many missing values. In this dataset, there are no explicit `null` values as shown in Figure 1 below. But by observing the minimum value from the summary of the dataset as shown in Figure 2, there are records with 0 value. These records will be assumed as having null values because it is logically incorrect.
 
 <img src="{{ site.url }}/images/diabetes-1.png">
+
 <cite>**Figure 1.**  Data type and missing value of each feature</cite>
 
 <img src="{{ site.url }}/images/diabetes-2.png">
+
 <cite>**Figure 2.**  Summary of numeric values in the dataset</cite>
 
 ## Exploratory Data Analysis
@@ -42,16 +44,19 @@ One of data quality measure is the completeness of data, that is reflected by ho
 After replacing the 0 value with `null`, the number of non-missing values is recalculated and the result is shown in Figure 3.
 
 <img src="{{ site.url }}/images/diabetes-3.png">
+
 <cite>**Figure 3.**  Recalculation result of missing values</cite>
 
 Bar and pie plot are used to visualize the ratio of data that are classified as 1 and 0 as shown in Figure 4. It shows that the dataset is unbalanced.
 
 <img src="{{ site.url }}/images/diabetes-4.png">
+
 <cite>**Figure 3.**  Distribution of the label `Income`</cite>
 
 In this dataset, the correlation of each feature is visualized as heatmap in Figure 5 below.
 
 <img src="{{ site.url }}/images/diabetes-5.png">
+
 <cite>**Figure 5.**  Correlation between features</cite>
 
 Correlation between features in PimaDiabetes dataset range from 0 to 1. All features have positive correlation with `Outcome`, and feature `Glucose` has the highest positive correlation meanwhile `BloodPressure` has the lowest correlation with `Outcome`.
@@ -64,6 +69,7 @@ standardized by following this equation
 The visualisation of the distribution of the standardized PimaDiabetes is shown in Figure 6.
 
 <img src="{{ site.url }}/images/diabetes-6.png">
+
 <cite>**Figure 6.**  Boxplot of PimaDiabetes</cite>
 
 What can be concluded from the boxplot above are:
@@ -76,6 +82,7 @@ to the right.
 It is known that there are outliers in every feature. Also, the trend shows that the median of features whose `Outcome` is 1 is higher than the data whose `Outcome` is 0. To illustrate the correlation between two features, the pair plot is used as shown in Figure 7. By looking at this visualisation, the `Glucose` is assumed to be the best estimator because the scatter plots between `Glucose` and other features are the most clearly separated.
 
 <img src="{{ site.url }}/images/diabetes-7.png">
+
 <cite>**Figure 7.**  Pairplot</cite>
 
 ## Regression Model with Single Predictor
@@ -84,6 +91,7 @@ A column `ThreeOrMoreKids` is filled with boolean value that represents whether 
 
 
 <img src="{{ site.url }}/images/diabetes-8.png">
+
 <cite>**Figure 8.**  Bar plot of `ThreeOrMoreKids` column’s value against its count</cite>
 
 There are more non-diagnosed women who have less than three kids but there are more diabetes diagnosed women who have three or more kids. It indicates the positive correlation between `ThreeOrMoreKids` and `Outcome`.
@@ -120,24 +128,27 @@ Before fitting the model, the data will be splitted into training and testing da
 The features used as predictor affect the performance of the regressor model. Figure 10 and 11 shows the difference in accuracy when the number of features used is modified. The importance of each feature is defined by `SelectKBest` and chi2 in `feature_selection` from scikit learn. It uses chi-square for feature selection purpose.
 
 <img src="{{ site.url }}/images/diabetes-10.png">
+
 <cite>**Figure 10.**  Number of features vs accuracy before imputing median to missing values and deleting SkinThickness & Insulin</cite>
 
 <img src="{{ site.url }}/images/diabetes-11.png">
+
 <cite>**Figure 11.**  Number of features vs accuracy after imputing median to missing values</cite>
 
 After the pre-processing is done, the intercept and coefficients for each feature is shown in Figure 12.
 
 <img src="{{ site.url }}/images/diabetes-12.png">
+
 <cite>**Figure 12.**  Intercept and coefficient of logistic regression</cite>
 
 All features except BloodPressure have positive sign. Since the data is continuous, the estimated odds of women to be diagnosed positive of diabetes will increase as the data value becomes higher. On the other hand, `BloodPressure` has negative sign thus it will decrease the estimated probability of a women to be diagnosed positive when its `BloodPressure` value becomes higher.
 
 According to Alan et. al., the farther a 𝜷𝒊 falls from 0, the stronger its effect on predictor *x<sub>i</sub>* and the odd ratios will fall farther from 1. Thus, for the coefficient in Figure 12, the predictor that has strong effect on *x<sub>i</sub>* are `DiabetesPedigree`. But this can also be affected of the different scale of each data.
 
-On the first row data in `ToPredict.csv`, the estimated probability of this women to be tested 
-positive is 0.558. Given the continuous value in 6 selected features, the estimated probability of this woman to be labelled 1 is higher than 1 – 0.558 = 0.442, and the odds equals 0.558/0.442 = 1.26, meaning that a positive diabetes test result is  1.26 times as likely as a non-diabetes. Predicted labels for all data in  `ToPredict.csv` are shown in Figure 13.
+On the first row data in `ToPredict.csv`, the estimated probability of this women to be tested positive is 0.558. Given the continuous value in 6 selected features, the estimated probability of this woman to be labelled 1 is higher than 1 – 0.558 = 0.442, and the odds equals 0.558/0.442 = 1.26, meaning that a positive diabetes test result is  1.26 times as likely as a non-diabetes. Predicted labels for all data in  `ToPredict.csv` are shown in Figure 13.
 
 <img src="{{ site.url }}/images/diabetes-13.png">
+
 <cite>**Figure 13.**  Predicted outcome of `ToPredict.csv`</cite>
 
 <img src="{{ site.url }}/images/diabetes-14.png">
@@ -155,14 +166,17 @@ By observing the Figure 11, 5 features (`Pregnancies`, `Glucose`, `BloodPressure
 The intercept, coefficients, and predicted value of this model is shown in Figure 16 and 17 below.
 
 <img src="{{ site.url }}/images/diabetes-16.png">
+
 <cite>**Figure 16.**  Intercept and coefficient of 5 features</cite>
 
 <img src="{{ site.url }}/images/diabetes-17.png">
+
 <cite>**Figure 17.**  Predicted Outcome of  ToPredict.csv   </cite>
 
 The performance of this model can be measured with `confusion_matrix` that shows how well the model classify the data.
 
 <img src="{{ site.url }}/images/diabetes-18.png">
+
 <cite>**Figure 18.**  Model performance</cite>
 
 Due to the imputation on the missing value, the distribution of data is slightly changed. Thus, the model with 6 features as predictor will be used to predict the status of each woman whether they are diagnosed with diabetes or non-diagnosed.
