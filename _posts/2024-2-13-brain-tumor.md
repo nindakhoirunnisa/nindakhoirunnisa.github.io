@@ -28,7 +28,7 @@ This study proposes a Convolutional Neural Network (CNN) that was trained by usi
 The images on the dataset differ in size so in the preprocessing stage all images’ sizes and dimensions are transformed to 128 x 128 pixels (Minarno, 2021). After combining images from 2 folders in the original dataset, the dataset is split into 80% train data, 10% validation data, and 10% test data. 
 Besides data preprocessing, augmentation produces extra data from existing data using rotation, zoom, shift, and flip techniques as shown in Figure 2.2. This method could improve the evaluation result of the classification (Xiao, 2020) and it is relevant for small datasets (Ottoni, 2023).
 
-<img src="{{ site.url }}/images/brain-2.png">
+<img src="{{ site.url }}/images/brain-3.png">
 
 <cite>**Figure 2.**  Result of image augmentation</cite>
 
@@ -38,7 +38,7 @@ The CNN model in this study follows the proposed model in another research (Mina
 Convolutional 2D layer consisted of filters with specific kernel size whose dimension was passed as (n, n) tuples. All convolutional layers in this model use `same` as its padding value to preserve the shape of the output to match the input. Maxpooling layer is utilized after every convolutional layer. It reduces the spatial dimension of its input by taking the maximum value of each window whose size was defined by `pool_size`. By using `pool_size` = (2,2), the 
 output shape (width and height) of this layer will be half of its input size. The output of the last Maxpooling 2D layer will be flattened into one-dimensional array in Flatten layer. The output of this layer will be received as input in a dense layer where its output shape is altered by the number of units. Dense layer performs dot product of its input along with weights to obtain the output. Furthermore, the dropout layer in this CNN model helps reduce overfitting by randomly sets input units to 0 with specific rate at each step during the training. A dense layer with softmax activation and 4 classes is used as layer to produce the final output.
 
-<img src="{{ site.url }}/images/brain-3.png">
+<img src="{{ site.url }}/images/brain-4.png">
 
 <cite>**Figure 3.**  Model topology</cite>
 
@@ -54,17 +54,17 @@ Hyperparameter tuning is used to find the optimal parameter for the CNN model to
 ## Result
 Several models with different combinations of parameters were trained with epoch = 5 to determine the best parameter. The result of combining the CNN model with hyperparameter tuning is shown in Table 3.
 
-<img src="{{ site.url }}/images/brain-4.png">
+<img src="{{ site.url }}/images/brain-5.png">
 
 <cite>**Figure 4.**  Result of hyperparameter tuning</cite>
 
 Table 3 shows a general pattern where less dense layer, less dropout rate, and using RMSprop as an optimizer result in better accuracy on the validation data. Model testing was done by applying the best parameters. The train and validation accuracy and loss are visualized in Figure 5 and the model performance evaluation of the testing data can be seen in Figure 6 below. An accuracy of 91% in the testing data was obtained from this CNN model.
 
-<img src="{{ site.url }}/images/brain-5.png">
+<img src="{{ site.url }}/images/brain-6.png">
 
 <cite>**Figure 5.**  Accuracy and Loss</cite>
 
-<img src="{{ site.url }}/images/brain-6.png">
+<img src="{{ site.url }}/images/brain-7.png">
 
 <cite>**Figure 6.**  Model performance evaluation</cite>
 
