@@ -184,10 +184,10 @@ Due to the imputation on the missing value, the distribution of data is slightly
 ## References
 - Jack W. Smith, J.E. Everhart, W.C. Dickson, W.C. Knowler, & R.S. Johannes. (1988). Using the ADAP Learning Algorithm to Forecast the Onset of Diabetes Mellitus. Annual Symposium on Computer Application in Medical Care, 261–265.
 - Agresti, A. (2018). Statistical Methods for the Social Sciences, Global Edition (5th edition). Pearson Education Limited.
-- sklearn.feature_selection.chi2. (n.d.). Scikit-Learn. https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.chi2.html
-- Step by Step Diabetes Classification-KNN-detailed. (2020, October 31). Kaggle. https://www.kaggle.com/code/shrutimechlearn/step-by-step-diabetes-classification-knn-detailed
-- Multivariate Statistical Analysis on Diabetes. (2020, August 10). Kaggle. https://www.kaggle.com/code/ravichaubey1506/multivariate-statistical-analysis-on-diabetes
-- Machine Learning & Predictive Modeling Analytics. (2020, April 16). Kaggle. https://www.kaggle.com/code/ravichaubey1506/machine-learning-predictive-modeling-analytics?scriptVersionId=3211447
+- sklearn.feature_selection.chi2. (n.d.). Scikit-Learn. [https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.chi2.html](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.chi2.html)
+- Step by Step Diabetes Classification-KNN-detailed. (2020, October 31). Kaggle. [https://www.kaggle.com/code/shrutimechlearn/step-by-step-diabetes-classification-knn-detailed](https://www.kaggle.com/code/shrutimechlearn/step-by-step-diabetes-classification-knn-detailed)
+- Multivariate Statistical Analysis on Diabetes. (2020, August 10). Kaggle. [https://www.kaggle.com/code/ravichaubey1506/multivariate-statistical-analysis-on-diabetes](https://www.kaggle.com/code/ravichaubey1506/multivariate-statistical-analysis-on-diabetes)
+- Machine Learning & Predictive Modeling Analytics. (2020, April 16). Kaggle. [https://www.kaggle.com/code/ravichaubey1506/machine-learning-predictive-modeling-analytics?scriptVersionId=3211447](https://www.kaggle.com/code/ravichaubey1506/machine-learning-predictive-modeling-analytics?scriptVersionId=3211447)
 
 
 [Github](https://github.com/nindakhoirunnisa/sml-1)
