@@ -8,7 +8,7 @@ image:
 categories: portofolio
 ---
 
-*This project aimed to segment customers of an online retail store (from [this dataset](https://archive.ics.uci.edu/dataset/502/online+retail+ii)) based on their similarity in behaviour and to find patterns in the data.*
+*This project aimed to segment customers of an online retail store based on their similarity in behaviour and to find patterns in the data.*
 
 <p class="notice-inverse">
 <strong>Author</strong>: Ninda Khoirunnisa. This is coursework for Data Engineering Course in MSc Data Science Program, University of Manchester, 2022.</p>
@@ -17,7 +17,7 @@ categories: portofolio
 
 **EDA**
 
-This Online Retail II data set contains all the transactions occurring for a UK-based and registered, non-store online retail between 01/12/2009 and 09/12/2011.The company mainly sells unique all-occasion gift-ware. Many customers of the company are wholesalers. 
+This Online Retail II data set ([from here](https://archive.ics.uci.edu/dataset/502/online+retail+ii))  contains all the transactions occurring for a UK-based and registered, non-store online retail between 01/12/2009 and 09/12/2011.The company mainly sells unique all-occasion gift-ware. Many customers of the company are wholesalers. 
 
 We're going to investigate whether there are groups of customers, how they are similar, and what they may represent.
 
