@@ -244,3 +244,4 @@ where DATE(sr.transaction_date) between '2019-04-11' and '2019-04-13'
 group by p.product_id
 order by sum(quantity) desc
 limit 10;
+
