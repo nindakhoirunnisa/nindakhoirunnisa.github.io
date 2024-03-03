@@ -171,11 +171,12 @@ select * from customer_stores;
 select * from sales_receipts;
 
 # No 1
-select c.customer_id, c.first_name, c.email, sr.transaction_date, sr.unit_price * sr.quantity AS line_item_amount
+select c.customer_id, c.first_name customer_firt_name, c.email customer_email, DATE(sr.transaction_date) transaction_date,
+sr.unit_price * sr.quantity AS line_item_amount
 from SALES_RECEIPTS sr
 join customers c on sr.customer_id = c.customer_id
 where email = 'Charissa@Integer.us' and DATE(sr.transaction_date) = '2019-04-20'
-order by sr.transaction_date desc;
+order by sr.transaction_date desc, line_item_amount desc;
 
 #No. 2
 select pt.name product_type, sum(sr.quantity) total_quantity_sold,
@@ -245,3 +246,34 @@ group by p.product_id
 order by sum(quantity) desc
 limit 10;
 
+#Checked No. 1
+select * from CUSTOMERS where email='Charissa@Integer.us';
+select * from sales_receipts where customer_id = 8144 order by transaction_date desc;
+
+#Checked No. 2
+select * from (select pt.name, sr.quantity, sr.transaction_date from sales_receipts sr left join PRODUCTS P on sr.product_id = P.product_id
+left join product_types pt on P.type_id = pt.type_id
+where P.type_id = 1 and DATE(sr.transaction_date) between '2019-04-06' and '2019-04-14') as p
+left join (select pt.name, sr.quantity, sr.transaction_date from sales_receipts sr left join PRODUCTS P on sr.product_id = P.product_id
+left join product_types pt on P.type_id = pt.type_id
+where P.type_id = 1 and sr.transaction_date between '2019-04-06' and '2019-04-14') as q on p.transaction_date = q.transaction_date
+where q.name is null and DATE(p.transaction_date) = '2019-04-06'
+
+#Checked No. 3
+select sum(sr.quantity), pt.name from sales_receipts sr
+left join products p on sr.product_id = p.product_id
+left join product_types pt on p.type_id = pt.type_id
+where DATE(sr.transaction_date) = '2019-04-02'
+and pt.name = 'Biscotti'
+
+#Checked No. 4
+select sr.customer_id, sum(sr.quantity) t from sales_receipts sr
+where DATE(sr.transaction_date) = '2019-04-20' and customer_id is not null
+group by customer_id
+order by t desc
+
+#Checked No. 5
+select sum(quantity) from sales_receipts sr
+left join products p on sr.product_id = p.product_id
+where DATE(sr.transaction_date) between '2019-04-11' and '2019-04-13'
+and p.product_id = 70
